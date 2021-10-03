@@ -26,6 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - run: cd ./renaissance
       - run: npm ci
       - run: npm run format
       - run: npm run test
