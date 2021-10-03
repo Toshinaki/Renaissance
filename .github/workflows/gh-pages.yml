@@ -26,12 +26,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Test * Build
+      - name: Test & Build
         working-directory: ./renaissance
         run: |
           npm ci
           npm run format
-          npm run test
           npm run build
 
       - name: Deploy
